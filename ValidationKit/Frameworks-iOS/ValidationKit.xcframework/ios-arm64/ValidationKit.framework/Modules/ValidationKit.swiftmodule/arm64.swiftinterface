@@ -1,0 +1,29 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target arm64-apple-ios13.1 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ValidationKit
+import LocalAuthentication
+import Swift
+import UIKit
+@_exported import ValidationKit
+public enum AuthenticationState {
+  case loggedin
+  case loggedout
+  public static func == (a: ValidationKit.AuthenticationState, b: ValidationKit.AuthenticationState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Validator : ObjectiveC.NSObject {
+  public static var shared: ValidationKit.Validator
+  public func login(completion: ((Swift.Bool, Swift.Error?, ValidationKit.AuthenticationState) -> Swift.Void)? = nil)
+  public func isLoggedIn() -> Swift.Bool
+  public func isFaceId() -> Swift.Bool
+  public func hello(text: Swift.String) -> Swift.String
+  @objc deinit
+}
+extension Validator {
+  public func createAlertController(error: Swift.Error?, title: Swift.String?) -> UIKit.UIAlertController
+}
+extension ValidationKit.AuthenticationState : Swift.Equatable {}
+extension ValidationKit.AuthenticationState : Swift.Hashable {}

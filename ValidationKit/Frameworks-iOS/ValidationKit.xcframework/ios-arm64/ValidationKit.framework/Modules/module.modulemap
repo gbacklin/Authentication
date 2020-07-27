@@ -1,0 +1,11 @@
+framework module ValidationKit {
+  umbrella header "ValidationKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ValidationKit.Swift {
+    header "ValidationKit-Swift.h"
+    requires objc
+}

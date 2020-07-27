@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LhT-xw-acM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="9lf-zy-3pv">
+            <objects>
+                <viewController id="c8H-ZT-G2H" customClass="ViewController" customModule="TestValidationKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uAQ-y6-EQX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n78-98-0iV">
+                                <rect key="frame" x="177.5" y="428.5" width="59" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Log In"/>
+                                <state key="highlighted" title="Log Out"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="c8H-ZT-G2H" eventType="touchUpInside" id="mrd-Dc-67b"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Authenticate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKM-VE-umF">
+                                <rect key="frame" x="132.5" y="502.5" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="n78-98-0iV" firstAttribute="centerX" secondItem="uAQ-y6-EQX" secondAttribute="centerX" id="1ya-6K-Oby"/>
+                            <constraint firstItem="LKM-VE-umF" firstAttribute="centerX" secondItem="uAQ-y6-EQX" secondAttribute="centerX" id="WEk-rx-UVn"/>
+                            <constraint firstItem="LKM-VE-umF" firstAttribute="top" secondItem="n78-98-0iV" secondAttribute="bottom" constant="35" id="mJD-Rq-9Yb"/>
+                            <constraint firstItem="n78-98-0iV" firstAttribute="centerY" secondItem="uAQ-y6-EQX" secondAttribute="centerY" id="qyH-8c-THW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iKn-34-BDz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e8m-xx-Mc8"/>
+                    <connections>
+                        <outlet property="faceIDLabel" destination="LKM-VE-umF" id="Zz9-FW-HNp"/>
+                        <outlet property="loginButton" destination="n78-98-0iV" id="52b-UJ-CQj"/>
+                        <segue destination="el8-4A-Fte" kind="show" identifier="ShowSuccess" id="EPC-gL-HVj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9Y-8y-Flt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Success View Controller-->
+        <scene sceneID="gca-F5-eXU">
+            <objects>
+                <viewController storyboardIdentifier="SuccessViewController" id="el8-4A-Fte" customClass="SuccessViewController" customModule="TestValidationKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lpm-ws-ptT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vs4-bX-qaa">
+                                <rect key="frame" x="145" y="426" width="124" height="44"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vs4-bX-qaa" firstAttribute="centerY" secondItem="Lpm-ws-ptT" secondAttribute="centerY" id="8JE-nI-E3y"/>
+                            <constraint firstItem="Vs4-bX-qaa" firstAttribute="centerX" secondItem="Lpm-ws-ptT" secondAttribute="centerX" id="HOD-cE-w6P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Gm-2p-vO2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LPn-FK-chk">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="OxW-u4-QRy">
+                            <connections>
+                                <segue destination="U7q-XB-N3y" kind="unwind" unwindAction="unwindToLogoutWithSegue:" id="Ewz-hl-UGr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8O-7i-BTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="U7q-XB-N3y" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mL1-Kl-zyg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LhT-xw-acM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mJm-YJ-PRF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c8H-ZT-G2H" kind="relationship" relationship="rootViewController" id="Igq-h3-dFM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQy-f7-nmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>

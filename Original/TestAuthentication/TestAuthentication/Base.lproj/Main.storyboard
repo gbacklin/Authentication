@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qy4-XC-a7q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ySU-Dr-1I1">
+            <objects>
+                <viewController id="Qy4-XC-a7q" customClass="ViewController" customModule="TestAuthentication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvA-BR-kph">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgC-3x-aO4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiQ-5O-eUF">
+                                        <rect key="frame" x="30" y="60" width="354" height="776"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8r-F3-9OV">
+                                                <rect key="frame" x="147.5" y="368.5" width="59" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Log In"/>
+                                                <state key="highlighted" title="Log Out"/>
+                                                <connections>
+                                                    <action selector="tapButton:" destination="Qy4-XC-a7q" eventType="touchUpInside" id="shM-Uw-G9A"/>
+                                                </connections>
+                                            </button>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Authenticate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az1-dV-spU">
+                                                <rect key="frame" x="102.5" y="427.5" width="149" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Az1-dV-spU" firstAttribute="centerX" secondItem="hiQ-5O-eUF" secondAttribute="centerX" id="1zy-uV-MDF"/>
+                                            <constraint firstItem="m8r-F3-9OV" firstAttribute="centerY" secondItem="hiQ-5O-eUF" secondAttribute="centerY" id="BtP-VC-CTS"/>
+                                            <constraint firstItem="m8r-F3-9OV" firstAttribute="centerX" secondItem="hiQ-5O-eUF" secondAttribute="centerX" id="iBa-fz-3eN"/>
+                                            <constraint firstItem="Az1-dV-spU" firstAttribute="top" secondItem="m8r-F3-9OV" secondAttribute="bottom" constant="20" id="uSj-nf-zC7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hiQ-5O-eUF" firstAttribute="centerX" secondItem="JgC-3x-aO4" secondAttribute="centerX" id="08N-Tp-f4a"/>
+                                    <constraint firstItem="hiQ-5O-eUF" firstAttribute="top" secondItem="JgC-3x-aO4" secondAttribute="top" constant="60" id="Iyl-ct-bLL"/>
+                                    <constraint firstItem="hiQ-5O-eUF" firstAttribute="leading" secondItem="JgC-3x-aO4" secondAttribute="leading" constant="30" id="SRI-ry-ivl"/>
+                                    <constraint firstItem="hiQ-5O-eUF" firstAttribute="centerY" secondItem="JgC-3x-aO4" secondAttribute="centerY" id="nSE-wg-VrG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M6h-tr-oao" firstAttribute="trailing" secondItem="JgC-3x-aO4" secondAttribute="trailing" id="NyN-0g-TGY"/>
+                            <constraint firstAttribute="bottom" secondItem="JgC-3x-aO4" secondAttribute="bottom" id="adY-5y-6Ir"/>
+                            <constraint firstItem="JgC-3x-aO4" firstAttribute="leading" secondItem="M6h-tr-oao" secondAttribute="leading" id="ho5-Hg-Byt"/>
+                            <constraint firstItem="JgC-3x-aO4" firstAttribute="top" secondItem="dvA-BR-kph" secondAttribute="top" id="xIr-dF-Hqg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M6h-tr-oao"/>
+                    </view>
+                    <connections>
+                        <outlet property="faceIDLabel" destination="Az1-dV-spU" id="cDH-vv-9VC"/>
+                        <outlet property="loginButton" destination="m8r-F3-9OV" id="cGa-Cu-Ggl"/>
+                        <outlet property="stateView" destination="JgC-3x-aO4" id="c1R-sI-16R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eyw-pa-CAs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
